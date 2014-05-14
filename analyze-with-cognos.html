@@ -22,16 +22,71 @@
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<link href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
 	<title>BLUAcceleration @ IDUG 2014: Analyze with Cognos</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
-  </head>
 <style>
 body{background-color: #eee;}
-.jumbotron{padding-top:300px;}
+.jumbotron{padding-top:150px; margin-top: -20px;}
 .jumbotron h1{font-size: 100px;}
+.navbar{background-color: none;}
+
+.navbar-custom {
+    background-color: #27b1DB;
+    border-color: none;
+    color: white;
+    border-radius: 0;
+}
+.navbar-custom .navbar-nav > li > a {
+    color:#fff;
+    background-color: transparent;
+}
+
+.navbar-custom .navbar-nav > li > a:hover,
+.navbar-custom .navbar-nav > li > a:focus {
+    color: #333;
+    background-color: transparent;
+
+
+}
+
 </style>
 
+
+</head>
+
 <body>
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+		<li><a href="#">Analyze with Cognos</a></li>
+		<li><a href="#">Analyze with R</a></li>
+		<li><a href="#">Load data from Excel</a></li>
+		<li><a href="#">Sync from Cloudant</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://bluforcloud.com/?r=idug">BLUForCloud.com</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+
 <div class="jumbotron">
 
 	<h1>
@@ -44,28 +99,51 @@ body{background-color: #eee;}
 
 <div class="container">
 	<div class="row clearfix">
-		<div class="col-md-12 column">
 			<div class="scenario">
-			<p>Adele the business analyst at ACME Corporation wants to create reports using BLU Acceleration and Cognos Business Insight on her sales data. She first would like to get acquainted with the sample reports provided with BLU Acceleration for cloud and then use this scenario to create a report.</p>
+			<div class="page-header">
+			<h1>The Scenario</h1>
+			</div>
 
-			<p>Note: Adele needs admin access to be able to perform publishing of Cube. Please ask me so that I can assign you admin privilege. You also need to download and install the following Cognos client software on your laptop. Follow Setup -> Download page. Please ignore installing fixpack and interim fixpack outlined in 2 and 3. Please install Cube designer for this scenario.</p>
+			<p class="bg-info"><i>Adele the business analyst at ACME Corporation wants to create reports using BLU Acceleration and Cognos Business Insight on her sales data. She first would like to get acquainted with the sample reports provided with BLU Acceleration for cloud and then use this scenario to create a report.</p>
+
+			<p class="bg-info">Note: Adele needs admin access to be able to perform publishing of Cube. Please ask me so that I can assign you admin privilege. You also need to download and install the following Cognos client software on your laptop. Follow Setup -> Download page. Please ignore installing fixpack and interim fixpack outlined in 2 and 3. Please install Cube designer for this scenario.</p>
 			 
-			<p>Install the IBM Cognos modeling tools on a Windows computer in the same directory in this order</p>
-			<ol>
-				<li>
-1. IBM Cognos Framework Manager (647 MB)
-2. IBM Cognos Business Intelligence 10.2.1 Fix Pack 1 (2.4 GB)
-3. IBM Cognos Business Intelligence 10.2.1.1 Interim Fix 3 (794 MB)
-4. Set up the connection to the Cognos server (Important setup steps)
-5. Optional. To model dimensional dynamic cubes: IBM Cognos Cube Designer (87.7 MB)
-		
-
-
-
+			<p class="bg-info">Install the IBM Cognos modeling tools on a Windows computer in the same directory in this order</p>
+			<ol class="bg-info">
+				<li> IBM Cognos Framework Manager (647 MB)
+				<li> IBM Cognos Business Intelligence 10.2.1 Fix Pack 1 (2.4 GB)
+				<li> IBM Cognos Business Intelligence 10.2.1.1 Interim Fix 3 (794 MB)
+				<li> Set up the connection to the Cognos server (Important setup steps)
+				<li> Optional. To model dimensional dynamic cubes: IBM Cognos Cube Designer (87.7 MB)
+			</ol>
+			</i>
+			
+			<p class="step">1) Please follow Analyze -> Cognos Business Intelligence to browse sample Cognos reports.</p>
+			<p>2) Launch IBM Cognos Cube Designer (You should have configured your “IBM Cognos Configuration” to point to the Cognos server by following step 4 in above section)</p>
+			<p>3) Click “Create New from Metadata”</p>
+			<img src="images/analyze-with-cognos/create-new-from-metadata.png">
+			<p>4) Click OK on the “Invalid Certificate” window</p>
+			<img src="images/analyze-with-cognos/click-ok-invalid-certificate.png">
+			<p>5) Login with your username and password</p>
+			<img src="images/analyze-with-cognos/login.png">
+			<p>6) Select schema “DB2INST1” from BLUDB, and click OK</p>
+			<img src="images/analyze-with-cognos/select-schema.png">
+			<p>7) Expand BLUDB → DB2INST1 → Tables to view the table list under schema “DB2INST1”</p>
+			<img src="images/analyze-with-cognos/expand-to-view-tables.png">
+			<p>8) Scroll down, find table “PERSON”, right click the table and select Generate → Cube with dimensions using data sampling</p>
+			<p>9) You can rename the generated cube name as you like</p>
+			<p>10) Right click the cube and click "Pulish"</p>
+			<p>11) Select all options on the “Publish” window and click OK (You can rename your package as you like)</p>
+			<p>12) Get Deploy Results</p>
+			<p>13) Launch IBM Cognos Connection home page, select “My Folders” tab and check that the published cube is listed</p>
+			<p>14) Launch Report Studio</p>
+			<p>15) Select the published package under “My Folders”</p>
+			<p>16) Select Create new, and then click “Chart”</p>
+			<p>17) Select the “Stacked column” type</p>
+			<p>18) Pause the pointer over the query explorer button and click Queries</p>
 
 
 			</div>
-		</div>
 	</div>
 </div>
 
