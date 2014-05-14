@@ -1,0 +1,50 @@
+body{background-color: #27B1DB;
+color: white;}
+
+
+
+.jumbotron{margin-bottom: 30px;
+background-color: #27b1DB;
+color: white;
+width: 100%}
+
+.gravatar{
+-webkit-border-radius: 250px;
+-moz-border-radius: 250px;
+border-radius: 250px;
+}
+
+
+
+/*scenario*/
+.scenario p{font-size: 15px;}
+.scenario {background-color: white;
+color: black;
+border: 1px solid white;
+padding: 15px;}
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 40px;
+  padding-top: 10px;
+  color: white;
+  background-color: black;
+  text-align: center;
+}
+
+
+
