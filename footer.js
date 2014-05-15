@@ -1,1 +1,1 @@
-document.write('<div id="footer"><div class="container"><p class="muted credit">Made with <span class="glyphicon glyphicon-heart"></span> by IBM</p></div></div>');
+document.write('<div id="footer"><div class="container"><p class="muted credit">Copyright <span class="glyphicon glyphicon-copyright-mark"></span> 2014 by IBM. All rights reserved. <!--Made with <span class="glyphicon glyphicon-heart"></span> in California--></p></div></div>');
