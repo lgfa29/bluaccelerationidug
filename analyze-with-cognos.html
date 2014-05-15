@@ -23,7 +23,7 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <link href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
-	<title>BLUAcceleration @ IDUG 2014: Analyze with Cognos</title>
+	<title>BLU Acceleration @ IDUG 2014: Analyze with Cognos</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 <style>
 body{background-color: #eee;}
@@ -43,7 +43,7 @@ body{background-color: #eee;}
 <div class="jumbotron">
 
 	<h1>
-		Analyze with Cognos
+		<span class="glyphicon glyphicon-signal"></span> Analyze with Cognos
 	</h1>
 
 </div>
@@ -104,8 +104,8 @@ body{background-color: #eee;}
 			<img src="images/analyze-with-cognos/drag-sql-from-the-toolbox.png">
 			<p class="step">20) Select the <b>SQL.</b> In the Properties pane, double-click the Data Source property and select <b>BLUDB</b> as data source</p>
 			<p class="step">21) Double-click the SQL property and copy paste the SQL below:<br><br>
-<i>
-select t1."EDU_DESC",t2."GEN_DESC",COUNT(f0."SERIALNO"  CONCAT  f0."SPORDER"),COUNT(f0."SERIALNO") from "PERSON" f0,"HISPANIC_ORIGIN" t15,"RACE_CODE" t16,"LANGUAGE" t10,"GENDER" t2,"ANCESTRY" t11,"RACE_CODE3" t12,"RACE_CODE2" t14,"COW" t5,"MARITAL_STATUS" t6,"EDUCATION" t1,"CITSTATUS" t9,"TRANSPORTATION" t13,"MILITARY_STATUS" t3,"STATECODE" t8,"PLACE_OF_WORK" t4,"PLACE_OF_BIRTH" t7 where f0."HISP"=t15."HISP_CODE" and f0."RAC1P"=t16."RACE_CODE" and f0."LANX"=t10."LANGUAGE_CODE" and f0."SEX"=t2."GEN_CODE" and f0."ANC1P"=t11."ANC_CODE" and f0."RAC3P"=t12."RACE_CODE" and f0."RAC2P"=t14."RACE_CODE" and f0."COW"=t5."COW_CODE" and f0."MAR"=t6."MAR_CODE" and f0."SCHL"=t1."EDU_CODE" and f0."CIT"=t9."CIT_CODE" and f0."JWTR"=t13."JWTR_CODE" and f0."MIL"=t3."MIL_CODE" and f0."ST"=t8."STATE_CODE" and f0."POWSP"=t4."POWSP_CODE" and f0."POBP"=t7."POBP_CODE" group by t1."EDU_DESC",t2."GEN_DESC"</i></p>
+			<p class="query">
+select t1."EDU_DESC",t2."GEN_DESC",COUNT(f0."SERIALNO"  CONCAT  f0."SPORDER"),COUNT(f0."SERIALNO") from "PERSON" f0,"HISPANIC_ORIGIN" t15,"RACE_CODE" t16,"LANGUAGE" t10,"GENDER" t2,"ANCESTRY" t11,"RACE_CODE3" t12,"RACE_CODE2" t14,"COW" t5,"MARITAL_STATUS" t6,"EDUCATION" t1,"CITSTATUS" t9,"TRANSPORTATION" t13,"MILITARY_STATUS" t3,"STATECODE" t8,"PLACE_OF_WORK" t4,"PLACE_OF_BIRTH" t7 where f0."HISP"=t15."HISP_CODE" and f0."RAC1P"=t16."RACE_CODE" and f0."LANX"=t10."LANGUAGE_CODE" and f0."SEX"=t2."GEN_CODE" and f0."ANC1P"=t11."ANC_CODE" and f0."RAC3P"=t12."RACE_CODE" and f0."RAC2P"=t14."RACE_CODE" and f0."COW"=t5."COW_CODE" and f0."MAR"=t6."MAR_CODE" and f0."SCHL"=t1."EDU_CODE" and f0."CIT"=t9."CIT_CODE" and f0."JWTR"=t13."JWTR_CODE" and f0."MIL"=t3."MIL_CODE" and f0."ST"=t8."STATE_CODE" and f0."POWSP"=t4."POWSP_CODE" and f0."POBP"=t7."POBP_CODE" group by t1."EDU_DESC",t2."GEN_DESC"</p>
 			<img src="images/analyze-with-cognos/paste-sql.png">
 			<p class="step">22) Click Validate to check for errors</p>
 			<p class="step">23) Select the Query. In the Properties pane, set the Processing property to Limited Local</p>

@@ -6,7 +6,7 @@ document.write('<li class="active"><a href="index.html">Home</a></li>');
 document.write('<li><a href="analyze-with-cognos.html">Analyze with Cognos</a></li>');
 document.write('<li><a href="#">Analyze with R</a></li>');
 document.write('<li><a href="load-data-from-excel.html">Load data from Excel</a></li>');
-document.write('<li><a href="#">Sync from Cloudant</a></li>');
+document.write('<li><a href="sync-from-cloudant.html">Sync from Cloudant</a></li>');
 document.write('</ul>');
 document.write('<ul class="nav navbar-nav navbar-right">');
 document.write('<li><a href="http://bluforcloud.com/?r=idug">BLUForCloud.com</a></li>');
