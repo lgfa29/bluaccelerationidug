@@ -18,7 +18,7 @@ border-radius: 250px;
 
 /*scenario*/
 
-.scenario {background-color: white;
+.scenario {background-color: #eee;
 color: #333;
 border: none;
 padding: 15px;
@@ -26,7 +26,12 @@ font-size: 13px;
  font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
 line-height: 25px;}
 
+.step{font-size:15px;margin-top:20px;
+background-color: #333; color: white; padding: 5px;}
 
+.scenario img{max-width: 600px;
+margin-top: 20px;
+margin-bottom: 100px;}
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -46,7 +51,7 @@ body {
   height: 40px;
   padding-top: 10px;
   color: white;
-  background-color: black;
+  background-color:#333;
   text-align: center;
 }
 
