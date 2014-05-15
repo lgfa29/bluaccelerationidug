@@ -3,6 +3,7 @@ color: white;}
 
 
 
+
 .jumbotron{margin-bottom: 30px;
 background-color: #27b1DB;
 color: white;
@@ -12,6 +13,13 @@ width: 100%}
 -webkit-border-radius: 250px;
 -moz-border-radius: 250px;
 border-radius: 250px;
+}
+a{color: #0e4657;
+background-color: none;
+}
+a:hover{
+text-decoration: none;
+color: white;
 }
 
 
@@ -29,7 +37,10 @@ line-height: 25px;}
 .step{font-size:15px;margin-top:20px;
 background-color: #333; color: white; padding: 5px;}
 
-.scenario img{max-width: 600px;
+.step a{color: white;}
+.step a:hover{color: #27b1DB;}
+
+.scenario img{max-width: 800px;
 margin-top: 20px;
 margin-bottom: 100px;}
 
@@ -55,5 +66,25 @@ body {
   text-align: center;
 }
 
+
+/*  navbar */
+.navbar{background-color: none;}
+
+.navbar-custom {
+    background-color: #333;
+    border-color: none;
+    color: #eee;
+    border-radius: 0;
+}
+.navbar-custom .navbar-nav > li > a {
+    color:#eee;
+    background-color: transparent;
+}
+
+.navbar-custom .navbar-nav > li > a:hover,
+.navbar-custom .navbar-nav > li > a:focus {
+    color: #27b1DB;
+    background-color: transparent;
+}
 
 
