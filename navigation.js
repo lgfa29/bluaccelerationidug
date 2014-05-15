@@ -4,7 +4,7 @@ document.write('<div class="collapse navbar-collapse" id="bs-example-navbar-coll
 document.write('<ul class="nav navbar-nav">');
 document.write('<li class="active"><a href="index.html">Home</a></li>');
 document.write('<li><a href="analyze-with-cognos.html">Analyze with Cognos</a></li>');
-document.write('<li><a href="#">Analyze with R</a></li>');
+document.write('<li><a href="analyze-with-r.html">Analyze with R</a></li>');
 document.write('<li><a href="load-data-from-excel.html">Load data from Excel</a></li>');
 document.write('<li><a href="sync-from-cloudant.html">Sync from Cloudant</a></li>');
 document.write('</ul>');
