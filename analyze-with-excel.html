@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
 
 	<!-- bootstrap code -->
 
@@ -25,96 +25,210 @@
 	<link href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
 	<title>BLU Acceleration for Cloud @ IDUG 2014: Analyze with Excel</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
-<style>
-body{background-color: #eee;}
-.jumbotron{padding-top:150px; margin-top: -20px;}
-.jumbotron h1{font-size: 100px; text-align: center;}
+  <style>
+    body{background-color: #eee;}
+    .jumbotron{padding-top:150px; margin-top: -20px;}
+    .jumbotron h1{font-size: 100px; text-align: center;}
+    </style>
 
-</style>
-
-<script type="text/javascript" src="navigation.js"> </script>
-<script type="text/javascript" src="footer.js"> </script>
-
+  <script type="text/javascript" src="navigation.js"> </script>
+  <script type="text/javascript" src="footer.js"> </script>
 </head>
-   
+
+<body>
+  <div class="jumbotron">
+    <h1>
+      <span class="glyphicon glyphicon-signal"></span> Analyze with Excel
+    </h1>
+  </div>
+
+  <div class="container">
+    <div class="scenario">
+      <p>
+        Alex, the crime data analyst at San Francisco Peace organization, would need to analyze the
+        last 11 years of crime data and create specific reports for policy makers.
+      </p>
+
+			<p class="bg-warning">
+        This scenario cannot be completed if you do not have Microsoft Excel software on your
+        laptop. Please skip this scenario and choose another one if you do not have Excel.
+      </p>
+    </div>
+
+    <div class="steps">
+      <h2>Loading the data</h2>
+
+			<div class="step">
+        <i>1</i>
+        Alex downloads the SF incident report data that is available in CSV zipped format from:
+        <a href="http://apps.sfgov.org/datafiles/view.php?file=Police/sfpd_incident_all_csv.zip">
+          http://apps.sfgov.org/datafiles/view.php?file=Police/sfpd_incident_all_csv.zip
+        </a>
+        <p class="bg-warning">
+          If the network is slow and you can not download the csv.zip then just download 2013 data
+          from here: <a href="files/sfpd_incident_2013.csv">sfpd_incident_2013.csv (18.9mb)</a>
+          (right click and select "Save Link As...")
+        </p>
+      </div>
+
+			<div class="step">
+        <i>2</i>
+        Unzip attached file which contains San Francisco Police Department data for year 2003 to
+        2014.
+      </div>
+
+			<div class="step">
+        <i>3</i>
+        Login to the BLU Acceleration for Cloud web console with the provided user name/password.
+        Click <span class="web-console-menu-item">Manage &#8594; Load Data</span> from the main menu.
+      </div>
+
+      <div class="step">
+        <i>4</i>
+        Using <span class="web-console-menu-item">Quick load</span> section, browse and select
+        <span class="web-console-menu-item">sfpd_incident_2003.csv</span> file from the unzipped
+        folder in Step 2.
+      </div>
+
+      <div class="step">
+        <i>5</i>
+        Use default options and click on the <span class="web-console-button">Load File</span>
+        button
+        <img src="images/analyze-with-r/use-default-options.png" class="img-responsive">
+      </div>
 
 
+      <div class="step">
+        <i>6</i>
+        If you get an alert message, just click OK and the file upload will start. Once the upload
+        is complete you will see a preview of the data. Click on the
+        <span class="web-console-button">Next</span> button.
+        <img src="images/analyze-with-r/alert-message.png" class="img-responsive">
+      </div>
 
+      <div class="step">
+        <i>7</i>
+        Choose <span class="web-console-menu-item">Create a new table and load</span> at the first
+        time when you are loading and then click on <span class="web-console-button">Next</span>.
+        <img src="images/analyze-with-r/create-a-new-table.png" class="img-responsive">
+      </div>
 
+      <div class="step">
+        <i>8</i>
+        Change the table name as you would like and click on
+        <span class="web-console-button">Finish</span>.
+        <img src="images/analyze-with-r/change-table-name.png" class="img-responsive">
+      </div>
 
-<div class="jumbotron">
+      <div class="step">
+        <i>9</i>
+        After <span class="web-console-menu-item">Quick Load</span> succeeds you can add more files
+        using the <span class="web-console-menu-item">Load more data</span> link.
+        <div class="bg-info">You can choose not to load all yearly data to save time.</div>
+        <img src="images/analyze-with-r/success.png" class="img-responsive">
+      </div>
 
-	<h1>
-		<span class="glyphicon glyphicon-signal"></span> Analyze with Excel
-	</h1>
+      <div class="step">
+        <i>10</i>
+        Repeat steps 4 through 9, except steps 7 and 8 where you need to select option
+        <span class="web-console-menu-item">"Load into an existing table"</span>, for loading data
+        for years 2004 to 2014 into the same table.
+        <br><br>
+        Select the Schema and Table Name and then
+        <span class="web-console-button">Finish</span>.
+        <img src="images/analyze-with-r/repeat.png" class="img-responsive">
+      </div>
 
-</div>
+      <h2>Analyzing with Excel</h2>
 
+			<div class="step">
+        <i>11</i>
+        Click <span class="web-console-menu-item">Analyze &#8594; Explore with Excel</span> from the
+        main menu
+      </div>
 
+			<div class="step">
+        <i>12</i>
+        Select the section
+        <span class="web-console-menu-item">Bring BLU data into Excel for analysis</span>
+        <p class="bg-warning">
+          Make sure to download and install DB2 client driver on your laptop
+          (available from <span class="web-console-menu-item">Set Up Menu &#8594; Downloads</span>
+          page).
+        </p>
+        Click link for <span class="web-console-menu-item">Run Query</span>.
+        <img src="images/load-data-from-excel/explore-with-excel.png" class="img-responsive">
+      </div>
 
-<div class="container">
-	<div class="row clearfix">
-			<div class="scenario">
-			<i>
-			<p class="bg-info">Alex, the crime data analyst at San Francisco Peace organization would need to analyze last 11 years of crime data and create specific reports for policy makers.</p>
+			<div class="step">
+        <i>13</i>
+        Enter any of these queries on <span class="web-console-menu-item">Run Query</span> page:
 
-			<p class="bg-warning">This scenario cannot be completed if you do not have Microsoft Excel software on your laptop. Please skip this scenario and choose another one if you do not have Excel.</p></i>
-		
-			<p class="step">1) Alex downloads the SF incident report data that is available in CSV zipped format from:<br> <a href="http://apps.sfgov.org/datafiles/view.php?file=Police/sfpd_incident_all_csv.zip">http://apps.sfgov.org/datafiles/view.php?file=Police/sfpd_incident_all_csv.zip</a></p>
-			<p class="step">2) Unzip attached file which contains San Francisco Police Department data for year 2003 to 2014.</p>
-			<!--<img src="images/load-data-from-excel/folder.png"> sfpd_incident_all.csv.zip-->
-			<p class="step">3) Login to BLU Acceleration for the cloud web console with the provided user name/password. Click Manage -> Load Data from the main menu.</p>
-			<p class="step">4) Using "Quick load" section - Browse and select sfpd_incident_2003.csv file from the unzipped folder in Step 2</p>
+        <div class="step">
+          <i>13.1</i>
+          Query to see what type of incidents are happening the most:
+          <p class="query">
+            SELECT "Category", count ("Category") as Occurrences  FROM "[USER ID]"."sfpd_incident"
+            group by "Category
+          </p>
+        </div>
 
-			<p class="step">5) Use default options -> Load File</p>
-			<img src="images/load-data-from-excel/use-default-options.png" class="img-responsive">
+        <div class="step">
+          <i>13.2</i>
+          Query to see where most of the crime incidents are happening, this information will be
+          helpful to decide which locations need tighter security:
+          <p class="query">
+            SELECT "Location", count ("Location") as Occurrences FROM "[USER ID]"."sfpd_incident"
+            group by "Location" order by Occurrences desc
+          </p>
+        </div>
 
-			<p class="step">6) Click OK for alert message -> File upload will start after which it generates File Preview -> Next</p>
-			<img src="images/load-data-from-excel/alert-message.png" class="img-responsive">
+        <p class="bg-warning">
+          Remember to replace <span class="query">[USERNAME]</span> with the user ID assigned to
+          you.
+        </p>
+      </div>
 
-			<p class="step">7) Choose "Create a new table and load" at the first time when you are loading -> Next</p>
-			<img src="images/load-data-from-excel/choose-create-a-new-table.png" class="img-responsive">
+			<div class="step">
+        <i>14</i>
+        Click the link
+        <span class="web-console-menu-item">
+          Run this query from Excel by downloading the odc file
+        </span>
+        <img src="images/load-data-from-excel/download-the-odc-file.png" class="img-responsive">
+      </div>
 
-			<p class="step">8) Change the table name as you would like -> Finish</p>
-			<img src="images/load-data-from-excel/change-table-name.png" class="img-responsive">
+			<div class="step">
+        <i>15</i>
+        Click <span class="web-console-menu-item">OK &#8594; Open</span>.
+        <p class="bg-warning">
+          You will get an error if you have not installed DB2 client driver on your laptop as
+          outlined in step 12
+        </p>
+        <img src="images/load-data-from-excel/open-the-file.png" class="img-responsive">
+      </div>
 
-			<p class="step">9) After Quick Load succeeds -> Load more data, you can choose not to load all yearly data to save time</p>
+			<div class="step">
+        <i>16</i>
+        Enter the user name and password with which you logged in and click on OK
+        <img src="images/load-data-from-excel/enter-username-and-password.png" class="img-responsive">
+      </div>
 
-			<img src="images/load-data-from-excel/success.png" class="img-responsive">
-			<p class="step">10) Repeat steps 4 through 9 except steps 7 and 8 where you need to select option "Load into an existing table" for loading data for years 2004 to 2014 into the same table -> Select the Schema and Table Name -> Finish</p>
-			<img src="images/load-data-from-excel/repeat-steps.png" class="img-responsive">
+			<div class="step">
+        <i>17</i>
+        View the query results graphically through a pie chart or bar chart
 
-			<p class="step">11) Click Analyze -> Explore with Excel from the main menu</p>
+        <div class="step">
+          Pie chart created with 13.1 Query results:
+          <img src="images/load-data-from-excel/13-1-pie-chart.png" class="img-responsive">
+        </div>
 
-			<p class="step">12) Select the section: Bring BLU data into Excel for analysis -> Make sure to download and install DB2 client driver on your laptop (available from Set Up Menu -> Downloads page)<br>Click link for "Run Query"</p>
-			<img src="images/load-data-from-excel/explore-with-excel.png" class="img-responsive">
-
-			<p class="step">13) Enter any of these queries on Run Query page:</p>
-			<p class="step">13.1) Query to see what type of incidents are happening the most:</p>
-			<p class="query">SELECT "Category", count ("Category") as Occurrences  FROM "BLUADMIN"."sfpd_incident" group by "Category</p>
-			<p class="step">13.2) Query to see where most of the crime incidents are happening, this information will be helpful to decide which locations need tighter security:</p>
-			<p class="query">SELECT "Location", count ("Location") as Occurrences FROM "BLUADMIN"."sfpd_incident" group by "Location" order by Occurrences desc</p>
-
-			<p class="step">14) Click the link "Run this query from Excel by downloading the odc file"</p>
-			<img src="images/load-data-from-excel/download-the-odc-file.png" class="img-responsive">
-
-			<p class="step">15) Click OK -> Open. You will get an error if you have not installed DB2 client driver on your laptop as outlined in step 12</p>
-			<img src="images/load-data-from-excel/open-the-file.png" class="img-responsive">
-
-			<p class="step">16)  Enter the user name and password with which you logged in -> OK</p>
-			<img src="images/load-data-from-excel/enter-username-and-password.png" class="img-responsive">
-
-			<p class="step">17) View the query results graphically through a pie chart or bar chart</p>
-			<p class="step">Pie chart created with 13.1) Query results:</p>
-			<img src="images/load-data-from-excel/13-1-pie-chart.png" class="img-responsive">
-			<p class="step">Bar chart created with about top 40 crime locations using 13.2) Query:</p>
-			<img src="images/load-data-from-excel/13-2-chart.png" class="img-responsive">
-
-
+        <div class="step">
+          Bar chart created with about top 40 crime locations using 13.2 Query:
+          <img src="images/load-data-from-excel/13-2-chart.png" class="img-responsive">
+        </div>
 			</div>
-	</div>
-</div>
-
-
-  </body>
+	  </div>
+  </div>
+</body>
 </html>

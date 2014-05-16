@@ -30,10 +30,7 @@ color: white;
 color: #333;
 border: none;
 padding: 15px;
-font-size: 13px;
-font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
-letter-spacing: .04em;
-line-height: 25px;}
+font-size: 15px;}
 
 .scenario a{color: #333;
 text-decoration: underline;}
@@ -141,6 +138,8 @@ body {
     border: 1px solid #ccc;
     margin: 10px 0;
   }
+
+  .step .step { border: none; }
 
 .web-console-menu-item {
   font-family: monospace;
