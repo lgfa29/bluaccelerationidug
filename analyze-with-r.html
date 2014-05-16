@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
 
 	<!-- bootstrap code -->
 
@@ -25,71 +25,160 @@
 	<link href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
 	<title>BLU Acceleration for Cloud @ IDUG 2014: Analyze with R</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
-<style>
-body{background-color: #eee;}
-.jumbotron{padding-top:150px; margin-top: -20px;}
-.jumbotron h1{font-size: 100px; text-align: center;}
+  <style>
+    body{ background-color: #eee; }
+    .jumbotron{ padding-top:150px; margin-top: -20px; }
+    .jumbotron h1{ font-size: 100px; text-align: center; }
+  </style>
 
-</style>
-
-<script type="text/javascript" src="navigation.js"> </script>
-<script type="text/javascript" src="footer.js"> </script>
-
+  <script type="text/javascript" src="navigation.js"> </script>
+  <script type="text/javascript" src="footer.js"> </script>
 </head>
-   
 
+<body>
+  <div class="jumbotron">
+    <h1>
+      <span class="glyphicon glyphicon-signal"></span> Analyze with R
+    </h1>
+  </div>
 
+  <div class="container">
+  	<div class="scenario">
+      <p>
+        Roger, the data scientist at San Francisco City Office, needs to analyze the last 11
+        years of crime data and create plots to uncover data patterns so City can take appropriate
+        safety measures and invest in police force.
+      </p>
+      <p class="bg-info">
+        This scenario uses statistical data analysis using R. If you have done programming with R
+        before you will be able to tweak the code and run the deviation. If you have not used R
+        before, do not worry, just follow the steps below.
+      </p>
+  	</div>
 
+    <div class="steps">
+      <h2>Loading the data</h2>
 
+  		<div class="step">
+        <i>1</i>
+        Roger downloads the SF incident report data that is available in CSV zipped format from:
+        <a href="http://apps.sfgov.org/datafiles/view.php?file=Police/sfpd_incident_all_csv.zip">
+          http://apps.sfgov.org/datafiles/view.php?file=Police/sfpd_incident_all_csv.zip.
+        </a>
+        <p class="bg-warning">
+          If the network is slow and you can not download the csv.zip then just download 2013 data
+          from here: <a href="files/sfpd_incident_2013.csv">sfpd_incident_2013.csv (18.9mb)</a>
+          (right click and select "Save Link As...")
+        </p>
+      </div>
 
-<div class="jumbotron">
+  		<div class="step">
+        <i>2</i>
+        Unzip the attached file which contains San Francisco Police Department data for year 2003
+        to 2014.
+      </div>
 
-	<h1><span class="glyphicon glyphicon-signal"></span> Analyze with R
-	</h1>
+  		<div class="step">
+        <i>3</i>
+        Login to the BLU Acceleration for Cloud web console with the provided user name/password
+        <br>
+        Click <span class="web-console-menu-item">Manage &#8594; Load Data</span> from the main menu.
+      </div>
 
-</div>
+  		<div class="step">
+        <i>4</i>
+        Using <span class="web-console-menu-item">Quick load</span> section, browse and select
+        <span class="web-console-menu-item">sfpd_incident_2003.csv</span> file from the unzipped
+        folder in Step 2.
+      </div>
 
+  		<div class="step">
+        <i>5</i>
+        Use default options and click on the <span class="web-console-button">Load File</span>
+        button
+        <img src="images/analyze-with-r/use-default-options.png" class="img-responsive">
+      </div>
 
+  		<div class="step">
+        <i>6</i>
+        If you get an alert message, just click OK and the file upload will start. Once the upload
+        is complete you will see a preview of the data. Click on the
+        <span class="web-console-button">Next</span> button.
+        <img src="images/analyze-with-r/alert-message.png" class="img-responsive">
+      </div>
 
-<div class="container">
-	<div class="row clearfix">
-			<div class="scenario">
-			<i>
-			<p class="bg-info">Roger, the data scientist at San Francisco City Office needs to analyze last 11 years of crime data and create plots to uncover data pattern so City can take appropriate safety measures and invest in police force.</p>
+  		<div class="step">
+        <i>7</i>
+        Choose <span class="web-console-menu-item">Create a new table and load</span> at the first
+        time when you are loading and then click on <span class="web-console-button">Next</span>.
+        <img src="images/analyze-with-r/create-a-new-table.png" class="img-responsive">
+      </div>
 
-			<p class="bg-info">This scenario uses statistical data analysis using R. If you have done programming with R before you will be able to tweak the code and run the deviation. If you have not used R before, do not worry, just follow the steps below.</p>
-			<p class="bg-warning">If  the network is slow and you can not download the csv.zip then just download 2013 data from here: <a href="files/sfpd_incident_2013.csv">sfpd_incident_2013.csv (18.9mb)</a></p>
-			</i>
-		
-			<p class="step">1) Roger downloads the SF incident report data that is available in CSV zipped format from:<br>
-			<a href="http://apps.sfgov.org/datafiles/view.php?file=Police/sfpd_incident_all_csv.zip">http://apps.sfgov.org/datafiles/view.php?file=Police/sfpd_incident_all_csv.zip.</a></p>
-			<p class="step">2) Unzip attached file which contains San Francisco Police Department data for year 2003 to 2014.</p>
-			<p class="step">3) Login to BLU Acceleration for the cloud web console with the provided user name/password<br>Click Manage -> Load Data from the main menu.</p>
-			<p class="step">4) Using "Quick load" section - Browse and select sfpd_incident_2003.csv file from the unzipped folder in Step 2.</p>
-			<p class="step">5) Use default options -> Load File</p>
-			<img src="images/analyze-with-r/use-default-options.png" class="img-responsive">
-			<p class="step">6) Click OK for alert message -> File upload will start after which it generates File Preview -> Next.</p>
-			<img src="images/analyze-with-r/alert-message.png" class="img-responsive">
-			<p class="step">7) Choose "Create a new table and load" at the first time when you are loading -> Next.</p>
-			<img src="images/analyze-with-r/create-a-new-table.png" class="img-responsive">
-			<p class="step">8) Change the table name as you would like -> Finish.</p>
-			<img src="images/analyze-with-r/change-table-name.png" class="img-responsive">
-			<p class="step">9) After Quick Load succeeds -> Load more data, you can choose not to load all yearly data to save time.</p>
-			<img src="images/analyze-with-r/success.png" class="img-responsive">
-			<p class="step">10) Repeat steps 4 through 9 except steps 7 and 8 where you need to select option "Load into an existing table" for loading data for years 2004 to 2014 into the same table -> Select the Schema and Table Name -> Finish.</p>
-			<img src="images/analyze-with-r/repeat.png" class="img-responsive">
-			<p class="step">R steps:</p>
-			<p class="step">11) Download a sample R script from here: <a href="files/sfpd_2003_graphs.R">sfpd_2003_graphs.R</a></p>
-			<p class="step">12) Click Analyze menu -> Develop R script -> Click Import and import the R script you just downloaded.</p>
-			<p class="step">13) Save and give it a name. eg. Sfpd.R. This should be saved under My Projects.</p>
-			<p class="step">14) Click Submit to run. View Plots.</p>
-			<img src="images/analyze-with-r/r-plots.png" class="img-responsive">
-			<p class="step">15) You can also launch R studio, access the script and run it.</p>
-			<p class="step">16) Browse the different plots that were created and enjoy.</p>
-			</div>
-	</div>
-</div>
+  		<div class="step">
+        <i>8</i>
+        Change the table name as you would like and click on
+        <span class="web-console-button">Finish</span>.
+        <img src="images/analyze-with-r/change-table-name.png" class="img-responsive">
+      </div>
 
+  		<div class="step">
+        <i>9</i>
+        After <span class="web-console-menu-item">Quick Load</span> succeeds you can add more files
+        using the <span class="web-console-menu-item">Load more data</span> link.
+        <div class="bg-info">You can choose not to load all yearly data to save time.</div>
+        <img src="images/analyze-with-r/success.png" class="img-responsive">
+      </div>
 
-  </body>
+  		<div class="step">
+        <i>10</i>
+        Repeat steps 4 through 9, except steps 7 and 8 where you need to select option
+        <span class="web-console-menu-item">"Load into an existing table"</span>, for loading data
+        for years 2004 to 2014 into the same table.
+        <br><br>
+        Select the Schema and Table Name and then
+        <span class="web-console-button">Finish</span>.
+        <img src="images/analyze-with-r/repeat.png" class="img-responsive">
+      </div>
+
+  		<h2>Running R scripts</h2>
+
+  		<div class="step">
+        <i>11</i>
+        Download a sample R script from here:
+        <a href="files/sfpd_2003_graphs.R">sfpd_2003_graphs.R</a>
+      </div>
+
+  		<div class="step">
+        <i>12</i>
+        Click <span class="web-console-menu-item">Analyze &#8594; Develop R script</span>. Click
+        <span class="web-console-menu-item">Import</span> and import the R script you just
+        downloaded.
+      </div>
+
+  		<div class="step">
+        <i>13</i>
+        Save and give it a name (eg. <span class="web-console-menu-item">Sfpd.R</span>). This
+        should be saved under <span class="web-console-menu-item">My Projects</span>.
+      </div>
+
+  		<div class="step">
+        <i>14</i>
+        Click <span class="web-console-button">Submit</span> to run. Once it is complete, click on
+        <span class="web-console-menu-item">Plots</span> to view the plots.
+        <img src="images/analyze-with-r/r-plots.png" class="img-responsive">
+      </div>
+
+  		<div class="step">
+        <i>15</i>
+        You can also launch R studio, access the script and run it.
+      </div>
+
+  		<div class="step">
+        <i>16</i>
+        Browse the different plots that were created and enjoy.
+      </div>
+    </div>
+  </div>
+
+</body>
 </html>

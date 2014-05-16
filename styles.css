@@ -98,4 +98,61 @@ body {
     background-color: transparent;
 }
 
+.steps h2 {
+  color: #555;
+  border-bottom: 1px solid #555;
+  margin-top: 30px;
+}
 
+.bg-info, .bg-warning {
+  font-style: italic;
+  font-size: 13px;
+  padding: 5px 10px;
+  margin: 10px 0;
+}
+
+.scenario {
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+.scenario:before {
+  content: "Scenario";
+  font-size: 26px;
+}
+  .scenario p {
+    margin-left: 20px;
+  }
+
+.step { padding: 10px 20px; }
+  .step a { text-decoration:underline; }
+
+  .step a:hover {
+    background-color: #000;
+    color: #fff;
+  }
+
+  .step i {
+    font-size: 20pt;
+    font-style: normal;
+    margin-right: 10px;
+  }
+
+  .step img {
+    border: 1px solid #ccc;
+    margin: 10px 0;
+  }
+
+.web-console-menu-item {
+  font-family: monospace;
+  font-style: italic;
+  font-size: 10pt;
+  background-color: #DDD;
+  padding: 3px 7px;
+}
+
+.web-console-button {
+  background-color: #008ABF;
+  color: #fff;
+  padding: 3px 7px;
+  font-size: 10pt;
+}
