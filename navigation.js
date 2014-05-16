@@ -7,6 +7,7 @@ document.write('<li><a href="analyze-with-r.html">Analyze with R</a></li>');
 document.write('<li><a href="analyze-with-excel.html">Analyze with Excel</a></li>');
 document.write('<li><a href="analyze-with-cognos.html">Analyze with Cognos</a></li>');
 document.write('<li><a href="sync-from-cloudant.html">Sync from Cloudant</a></li>');
+document.write('<li><a href="bring-public-datasets-from-s3.html">Bring public datasets from S3</a></li>');
 document.write('</ul>');
 document.write('<ul class="nav navbar-nav navbar-right">');
 document.write('<li><a href="http://bluforcloud.com/?r=idug" target="_blank">BLUForCloud.com</a></li>');
