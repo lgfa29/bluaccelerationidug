@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
 
 	<!-- bootstrap code -->
 
@@ -25,62 +25,115 @@
 	<link href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
 	<title>BLU Acceleration for Cloud @ IDUG 2014: Sync from Cloudant</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
-<style>
-body{background-color: #eee;}
-.jumbotron{padding-top:150px; margin-top: -20px;}
-.jumbotron h1{font-size: 100px; text-align: center;}
+  <style>
+    body { background-color: #eee; }
+    .jumbotron { padding-top:150px; margin-top: -20px; }
+    .jumbotron h1 { font-size: 100px; text-align: center; }
+  </style>
 
-</style>
-
-<script type="text/javascript" src="navigation.js"> </script>
-<script type="text/javascript" src="footer.js"> </script>
-
+  <script type="text/javascript" src="navigation.js"> </script>
+  <script type="text/javascript" src="footer.js"> </script>
 </head>
-   
 
+<body>
+  <div class="jumbotron">
+    <h1>
+      <span class="glyphicon glyphicon-retweet"></span> Sync from Cloudant
+    </h1>
+  </div>
 
+  <div class="container">
+    <div class="scenario">
+      <p>
+        Roger, the data analyst at a food product company, would like to analyze USDA Food and
+        vitamin data freely available from the web for creating new business opportunity for his
+        food products company. He manages his NoSQL data in IBM Cloudant database and wants to
+        leverage BLU Acceleration for Cloud for statistical analysis or reporting purposes.
+      </p>
 
+			<p class="bg-info">
+        In this scenario, you will be using US department of Agriculture Food database.
+        <br>
+        You have a choice of downloading the JSON data from
+        <a href="http://ashleyw.co.uk/files/foods-2011-10-03.json.zip">
+          http://ashleyw.co.uk/files/foods-2011-10-03.json.zip
+        </a> and uploading it to a Cloudant database at
+        <a href="https://cloudant.com">
+          https://cloudant.com
+        </a>
+        OR, for the purpose of this workshop, we have published this dataset for IDUG attendees
+        here: <a href="https://idug.cloudant.com/food">https://idug.cloudant.com/food</a>
+      </p>
+    </div>
 
+    <div class="steps">
+      <h2>Creating the Sync</h2>
 
-<div class="jumbotron">
+			<div class="step">
+        <i>1</i>
+        Login to the BLU Acceleration for Cloud web console. Click on
+        <span class="web-console-menu-item">Manage &#8594; Sync from Cloudant</span>
+      </div>
 
-	<h1>
-		<span class="glyphicon glyphicon-retweet"></span> Sync from Cloudant
-	</h1>
+			<div class="step">
+        <i>2</i>
+        Enter the following URL in to <span class="web-console-menu-item">Cloudant DB URL</span>:
+        <a href="https://idug.cloudant.com/food">https://idug.cloudant.com/food</a>
+        <p class="bg-info">
+          If you are using your own database, remember to enter you
+          <span class="web-console-menu-item">Username</span> and
+          <span class="web-console-menu-item">Password</span> as well.
+        </p>
+      </div>
 
-</div>
+			<div class="step">
+        <i>3</i>
+        Enter a table name of your choice in
+        <span class="web-console-menu-item">Target Table</span>
+        name
+      </div>
 
+			<div class="step">
+        <i>4</i>
+        Click <span class="web-console-menu-item">Start Sync</span>. You should see the sync in
+        progress:
+        <img src="images/sync-from-cloudant/start-sync.png" class="img-responsive">
+      </div>
 
+			<div class="step">
+        <i>5</i>
+        Refresh the screen and you should see status
+        <span class="web-console-menu-item">Running</span>
+      </div>
 
-<div class="container">
-	<div class="row clearfix">
-			<div class="scenario">
-			<i>
-			<p class="bg-info">Roger the data analyst at Food product company would like to analyze USDA Food and vitamin data freely available from the web for creating new business opportunity for his food products company. He manages his NOSQL data in IBM Cloudant database and wants to leverage BLU Acceleration for Cloud for statistical analysis or reporting purposes.</p>
+			<div class="step">
+        <i>6</i>
+        You can go to <span class="web-console-menu-item">Manage &#8594; Work with Tables</span>
+        and find your schema name and browse the table that you just created for the Cloudant sync
+        <img src="images/sync-from-cloudant/work-with-tables.png" class="img-responsive">
+      </div>
 
-			<p class="bg-info">In this scenario, you will be using US department of Agriculture Food database</p>
-			<p class="bg-info">You have a choice of downloading the JSON data from <a href="http://ashleyw.co.uk/files/foods-2011-10-03.json.zip">http://ashleyw.co.uk/files/foods-2011-10-03.json.zip</a> and uploading to a Cloudant database at <a href="https://cloudant.com">https://cloudant.com</a><br>
-			OR, for the purpose of this workshop, we have published this dataset for IDUG attendees here: <a href="https://idug.cloudant.com/food">https://idug.cloudant.com/food</a></p>
+			<div class="step">
+        <i>7</i>
+        You should be able to browse data as it comes in
+      </div>
 
+			<div class="step">
+        <i>8</i>
+        Click <span class="web-console-menu-item">Manage &#8594; Run Query</span> and feel free to
+        build the query using <span class="web-console-menu-item">Select Tables and Columns</span>
+        or type your own query.
+      </div>
 
-			</i>
-		
-			<p class="step">1) Login to BLUAcceleration web console. Click Manage -> Sync from Cloudant</p>
-			<p class="step">2) Enter the following url in to "Cloudant DB URL": <a href="https://idug.cloudant.com/food">https://idug.cloudant.com/food</a> (or your own)</p>
-			<p class="step">3) Enter a table name of your choice in Target Table name</p>
-			<p class="step">4) Click Start Sync. You should see sync in progress:</p>
-			<img src="images/sync-from-cloudant/start-sync.png" class="img-responsive">
-			<p class="step">5) Refresh the screen -> You should see status Running</p>
-			<p class="step">6) You can go to Manage -> Work with Tables -> find your schema name and browse table that you just created for Cloudant sync</p>
-			<img src="images/sync-from-cloudant/work-with-tables.png" class="img-responsive">
-			<p class="step">7) You should be able to browse data as it comes in</p>
-			<p class="step">8) Click Manage -> Run Query -> feel free to build the query using Select Tables and Columns or type your own query.</p>
-			<p class="step">9) You can bring the data back to excel using ODC scenario for further analytic processing. OR, follow any other scenario such as <a href="analyze-with-r.html">Analyze with R</a> or <a href="analyze-with-cognos.html">Analyze with Cognos</a> on this data. </p>
-			
-			</div>
+			<div class="step">
+        <i>9</i>
+        You can bring the data back to Excel using ODC scenario for further analytic processing OR
+        follow any other scenario such as
+        <a href="analyze-with-r.html">Analyze with R</a> or
+        <a href="analyze-with-cognos.html">Analyze with Cognos</a> on this data.
+      </div>
+    </div>
 	</div>
-</div>
 
-
-  </body>
+</body>
 </html>
