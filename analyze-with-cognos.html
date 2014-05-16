@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
 
 	<!-- bootstrap code -->
 
@@ -22,108 +22,255 @@
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-<link href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
 	<title>BLU Acceleration for Cloud @ IDUG 2014: Analyze with Cognos</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
-<style>
-body{background-color: #eee;}
-.jumbotron{padding-top:150px; margin-top: -20px;}
-.jumbotron h1{font-size: 100px; text-align: center;}
-</style>
-<script type="text/javascript" src="navigation.js"> </script>
-<script type="text/javascript" src="footer.js"> </script>
-
+  <style>
+    body { background-color: #eee; }
+    .jumbotron { padding-top:150px; margin-top: -20px; }
+    .jumbotron h1{ font-size: 100px; text-align: center; }
+  </style>
+  <script type="text/javascript" src="navigation.js"> </script>
+  <script type="text/javascript" src="footer.js"> </script>
 </head>
 
 <body>
+  <div class="jumbotron">
+    <h1>
+      <span class="glyphicon glyphicon-signal"></span> Analyze with Cognos
+    </h1>
+  </div>
 
+  <div class="container">
+		<div class="scenario">
+      <p>
+        Adele, the business analyst at ACME Corporation, wants to create reports using BLU
+        Acceleration and Cognos Business Insight on her sales data. She first would like to get
+        acquainted with the sample reports provided with BLU Acceleration for cloud and then use
+        this scenario to create a report.
+      </p>
 
+			<p class="bg-warning">
+        Adele needs admin access to be able to perform publishing of Cube. Please ask me so
+        that I can assign you admin privilege. You also need to download and install the following
+        Cognos client software on your laptop. Follow
+        <span class="web-console-menu-item">Setup -> Download</span>
+        page. Please ignore installing fixpack and interim fixpack outlined in 2 and 3. Please
+        install Cube designer for this scenario. See below:
 
+        <img src="images/analyze-with-cognos/cognos-downloads.png" class="img-responsive">
+      </p>
+    </div>
 
-<div class="jumbotron">
+    <div class="steps">
+      <h2>Designing the Cube</h2>
 
-	<h1>
-		<span class="glyphicon glyphicon-signal"></span> Analyze with Cognos
-	</h1>
+			<div class="step">
+        <i>1</i>
+        Please follow
+        <span class="web-console-menu-item">Analyze -> Cognos Business Intelligence</span> to
+        browse sample Cognos reports.
+      </div>
 
-</div>
+			<div class="step">
+        <i>2</i>
+        Launch IBM Cognos Cube Designer.
+        <p class="bg-info">You should have configured your “IBM Cognos Configuration” to point to
+          the Cognos server by following step 4 in above section.
+        </p>
+      </div>
 
+			<div class="step">
+        <i>3</i>
+        Click <span class="web-console-menu-item">Create New from Metadata</span>.
+        <img src="images/analyze-with-cognos/create-new-from-metadata.png" class="img-responsive">
+      </div>
 
+			<div class="step">
+        <i>4</i>
+        Click OK on the “Invalid Certificate” window.
+        <img src="images/analyze-with-cognos/click-ok-invalid-certificate.png" class="img-responsive">
+      </div>
 
-<div class="container">
-	<div class="row clearfix">
-			<div class="scenario">
-			<i>
-			<p class="bg-info">Adele, the business analyst at ACME Corporation, wants to create reports using BLU Acceleration and Cognos Business Insight on her sales data. She first would like to get acquainted with the sample reports provided with BLU Acceleration for cloud and then use this scenario to create a report.</p>
+			<div class="step">
+        <i>5</i>
+        Login with your username and password.
+        <img src="images/analyze-with-cognos/login.png" class="img-responsive">
+      </div>
 
-			<p class="bg-warning">Note: Adele needs admin access to be able to perform publishing of Cube. Please ask me so that I can assign you admin privilege. You also need to download and install the following Cognos client software on your laptop. Follow Setup -> Download page. Please ignore installing fixpack and interim fixpack outlined in 2 and 3. Please install Cube designer for this scenario. See below:</p>
-			<img src="images/analyze-with-cognos/cognos-downloads.png" class="img-responsive">
-			<p class="step">1) Please follow Analyze -> Cognos Business Intelligence to browse sample Cognos reports.</p>
-			<p class="step">2) Launch IBM Cognos Cube Designer (You should have configured your “IBM Cognos Configuration” to point to the Cognos server by following step 4 in above section).</p>
-			<p class="step">3) Click “Create New from Metadata”.</p>
-			<img src="images/analyze-with-cognos/create-new-from-metadata.png" class="img-responsive">
-			<p class="step">4) Click OK on the “Invalid Certificate” window.</p>
-			<img src="images/analyze-with-cognos/click-ok-invalid-certificate.png" class="img-responsive">
-			<p class="step">5) Login with your username and password.</p>
-			<img src="images/analyze-with-cognos/login.png" class="img-responsive">
-			<p class="step">6) Select schema “DB2INST1” from BLUDB, and click OK.</p>
-			<img src="images/analyze-with-cognos/select-schema.png" class="img-responsive">
-			<p class="step">7) Expand BLUDB → DB2INST1 → Tables to view the table list under schema “DB2INST1”.</p>
-			<img src="images/analyze-with-cognos/expand-to-view-tables.png" class="img-responsive">
-			<p class="step">8) Scroll down, find table “PERSON”, right click the table and select Generate → Cube with dimensions using data sampling.</p>
-			<img src="images/analyze-with-cognos/generate-cube-with-dimensions.png" class="img-responsive">
-			<p class="step">9) You can rename the generated cube name as you like.</p>
-			<img src="images/analyze-with-cognos/rename-generated-cube.png" class="img-responsive">
-			<p class="step">10) Right click the cube and click "Pulish".</p>
-			<img src="images/analyze-with-cognos/publish-cube.png" class="img-responsive">
-			<p class="step">11) Select all options on the “Publish” window and click OK (You can rename your package as you like).</p>
-			<img src="images/analyze-with-cognos/publish-cube-2.png" class="img-responsive">
-			<p class="step">12) Get Deploy Results</p>
-			<img src="images/analyze-with-cognos/get-deploy-results.png" class="img-responsive">
-			<p class="step">13) Launch IBM Cognos Connection home page, select “My Folders” tab and check that the published cube is listed.</p>
-			<img src="images/analyze-with-cognos/launch-ibm-cognos-connections-page.png" class="img-responsive">
-			<p class="step">14) Launch Report Studio.</p>
-			<img src="images/analyze-with-cognos/launch-report-studio.png" class="img-responsive">
-			<p class="step">15) Select the published package under “My Folders”.</p>
-			<img src="images/analyze-with-cognos/select-published-package.png" class="img-responsive">
-			<p class="step">16) Select Create new, and then click “Chart”.</p>
-			<img src="images/analyze-with-cognos/create-new-chart.png" class="img-responsive">
-			<p class="step">17) Select the “Stacked column” type.</p>
-			<img src="images/analyze-with-cognos/select-stacked-column.png" class="img-responsive">
-			<p class="step">18) Pause the pointer over the <b>query explorer</b> button and click <b>Queries</b>.</p>
-			<p class="step">19) Drag SQL from the Toolbox to the right of Query1.</p>
-			<img src="images/analyze-with-cognos/drag-sql-from-the-toolbox.png" class="img-responsive">
-			<p class="step">20) Select the <b>SQL.</b> In the Properties pane, double-click the Data Source property and select <b>BLUDB</b> as data source.</p>
-			<p class="step">21) Double-click the SQL property and copy paste the SQL below:<br><br>
-			<p class="query">
-select t1."EDU_DESC",t2."GEN_DESC",COUNT(f0."SERIALNO"  CONCAT  f0."SPORDER"),COUNT(f0."SERIALNO") from "PERSON" f0,"HISPANIC_ORIGIN" t15,"RACE_CODE" t16,"LANGUAGE" t10,"GENDER" t2,"ANCESTRY" t11,"RACE_CODE3" t12,"RACE_CODE2" t14,"COW" t5,"MARITAL_STATUS" t6,"EDUCATION" t1,"CITSTATUS" t9,"TRANSPORTATION" t13,"MILITARY_STATUS" t3,"STATECODE" t8,"PLACE_OF_WORK" t4,"PLACE_OF_BIRTH" t7 where f0."HISP"=t15."HISP_CODE" and f0."RAC1P"=t16."RACE_CODE" and f0."LANX"=t10."LANGUAGE_CODE" and f0."SEX"=t2."GEN_CODE" and f0."ANC1P"=t11."ANC_CODE" and f0."RAC3P"=t12."RACE_CODE" and f0."RAC2P"=t14."RACE_CODE" and f0."COW"=t5."COW_CODE" and f0."MAR"=t6."MAR_CODE" and f0."SCHL"=t1."EDU_CODE" and f0."CIT"=t9."CIT_CODE" and f0."JWTR"=t13."JWTR_CODE" and f0."MIL"=t3."MIL_CODE" and f0."ST"=t8."STATE_CODE" and f0."POWSP"=t4."POWSP_CODE" and f0."POBP"=t7."POBP_CODE" group by t1."EDU_DESC",t2."GEN_DESC"</p>
-			<img src="images/analyze-with-cognos/paste-sql.png" class="img-responsive">
-			<p class="step">22) Click Validate to check for errors.</p>
-			<p class="step">23) Select the Query. In the Properties pane, set the Processing property to Limited Local.</p>
-			<img src="images/analyze-with-cognos/set-processing-to-limited-local.png" class="img-responsive">
-			<p class="step">24) Pause the pointer over the page explorer button and click a report page.</p>
-			<img src="images/analyze-with-cognos/click-a-report-page.png" class="img-responsive">
+			<div class="step">
+        <i>6</i>
+        Select schema <span class="web-console-menu-item">DB2INST1</span> from
+        <span class="web-console-menu-item">BLUDB</span>, and click OK.
+        <img src="images/analyze-with-cognos/select-schema.png" class="img-responsive">
+      </div>
 
+			<div class="step">
+        <i>7</i>
+        Expand
+        <span class="web-console-menu-item">BLUDB &#8594; DB2INST1 &#8594; Tables</span>
+        to view the table list under schema
+        <span class="web-console-menu-item">DB2INST1</span>.
+        <img src="images/analyze-with-cognos/expand-to-view-tables.png" class="img-responsive">
+      </div>
 
-			<p class="step">25) Drag the column from the query to corresponding axis.</p>
-			<img src="images/analyze-with-cognos/drag-the-column.jpg" class="img-responsive">
+      <div class="step">
+        <i>8</i>
+        Scroll down, find table <span class="web-console-menu-item">PERSON</span>, right click the
+        table and select
+        <span class="web-console-menu-item">
+          Generate &#8594; Cube with dimensions using data sampling
+        </span>.
+        <img src="images/analyze-with-cognos/generate-cube-with-dimensions.png" class="img-responsive">
+      </div>
 
-			<p class="step">26) Please note, for this chart to display <b>Education Level by Gender</b>, we put &lt;#EDU_DESC#&gt; under &lt;#GEN_DESC#&gt; for <b>x-axis</b>, so that Education Level will be treated as a sub-category for Gender Information.</p>
-			<img src="images/analyze-with-cognos/select-stacked-column.png" class="img-responsive">
+			<div class="step">
+        <i>9</i>
+        You can rename the generated cube name as you like.
+        <img src="images/analyze-with-cognos/rename-generated-cube.png" class="img-responsive">
+      </div>
 
-			<p class="step">27) For <b>Default measure (y-axis)</b>, we will need specify <b>Aggregate Function</b> and <b>Rollup Aggregation Function</b>. For our case, specify <b>Total</b> for both.</p>
-			<img src="images/analyze-with-cognos/chart.png" class="img-responsive">
+			<div class="step">
+        <i>10</i>
+        Right click the cube and click <span class="web-console-menu-item">Pulish</span>.
+        <img src="images/analyze-with-cognos/publish-cube.png" class="img-responsive">
+      </div>
 
-			<p class="step">28) From <b>Page Explorer</b>, right click the report page we have been working on, and select <b>Run Page</b>.</p>
-			<img src="images/analyze-with-cognos/run-page.jpg" class="img-responsive">
+			<div class="step">
+        <i>11</i>
+        Select all options on the <span class="web-console-menu-item">Publish</span>
+        window and click <span class="web-console-menu-item">OK</span>
+        <p class="bg-info">You can rename your package as you like.</p>
+        <img src="images/analyze-with-cognos/publish-cube-2.png" class="img-responsive">
+      </div>
 
+			<div class="step">
+        <i>12</i>
+        Get Deploy Results
+        <img src="images/analyze-with-cognos/get-deploy-results.png" class="img-responsive">
+      </div>
 
+      <h2>Generating Charts</h2>
 
-			</div>
-	</div>
-</div>
+			<div class="step">
+        <i>13</i>
+        Launch IBM Cognos Connection home page, select
+        <span class="web-console-menu-item">My Folders</span>
+        tab and check that the published cube is listed.
+        <img src="images/analyze-with-cognos/launch-ibm-cognos-connections-page.png" class="img-responsive">
+      </div>
 
+			<div class="step">
+        <i>14</i>
+        Launch <span class="web-console-menu-item">Report Studio</span>.
+        <img src="images/analyze-with-cognos/launch-report-studio.png" class="img-responsive">
+      </div>
 
+			<div class="step">
+        <i>15</i>
+        Select the published package under <span class="web-console-menu-item">My Folders</span>.
+        <img src="images/analyze-with-cognos/select-published-package.png" class="img-responsive">
+      </div>
 
-  </body>
+			<div class="step">
+        <i>16</i>
+        Select <span class="web-console-menu-item">Create new</span>, and then click
+        <span class="web-console-menu-item">Chart</span>.
+        <img src="images/analyze-with-cognos/create-new-chart.png" class="img-responsive">
+      </div>
+
+			<div class="step">
+        <i>17</i>
+        Select the <span class="web-console-menu-item">Stacked column</span> type.
+        <img src="images/analyze-with-cognos/select-stacked-column.png" class="img-responsive">
+      </div>
+
+			<div class="step">
+        <i>18</i>
+        Pause the pointer over the <b>query explorer</b> button and click <b>Queries</b>.
+      </div>
+
+			<div class="step">
+        <i>19</i>
+        Drag <span class="web-console-menu-item">SQL</span> from the
+        <span class="web-console-menu-item">Toolbox</span> to the right of
+        <span class="web-console-menu-item">Query1</span>.
+        <img src="images/analyze-with-cognos/drag-sql-from-the-toolbox.png" class="img-responsive">
+      </div>
+
+			<div class="step">
+        <i>20</i>
+        Select the <span class="web-console-menu-item">SQL</span>. In the
+        <span class="web-console-menu-item">Properties</span> pane, double-click the
+        <span class="web-console-menu-item">Data Source</span> property and select
+        <span class="web-console-menu-item">BLUDB</span> as data source.
+      </div>
+
+			<div class="step">
+        <i>21</i>
+        Double-click the <span class="web-console-menu-item">SQL</span> property and copy paste the
+        SQL below:
+        <p class="query">
+          select t1."EDU_DESC",t2."GEN_DESC",COUNT(f0."SERIALNO"  CONCAT  f0."SPORDER"),
+          COUNT(f0."SERIALNO") from "PERSON" f0,"HISPANIC_ORIGIN" t15,"RACE_CODE" t16,
+          "LANGUAGE" t10,"GENDER" t2,"ANCESTRY" t11,"RACE_CODE3" t12,"RACE_CODE2" t14,
+          "COW" t5,"MARITAL_STATUS" t6,"EDUCATION" t1,"CITSTATUS" t9,"TRANSPORTATION" t13,
+          "MILITARY_STATUS" t3,"STATECODE" t8,"PLACE_OF_WORK" t4,"PLACE_OF_BIRTH" t7 where
+          f0."HISP"=t15."HISP_CODE" and f0."RAC1P"=t16."RACE_CODE" and f0."LANX"=t10."LANGUAGE_CODE"
+          and f0."SEX"=t2."GEN_CODE" and f0."ANC1P"=t11."ANC_CODE" and f0."RAC3P"=t12."RACE_CODE"
+          and f0."RAC2P"=t14."RACE_CODE" and f0."COW"=t5."COW_CODE" and f0."MAR"=t6."MAR_CODE"
+          and f0."SCHL"=t1."EDU_CODE" and f0."CIT"=t9."CIT_CODE" and f0."JWTR"=t13."JWTR_CODE"
+          and f0."MIL"=t3."MIL_CODE" and f0."ST"=t8."STATE_CODE" and f0."POWSP"=t4."POWSP_CODE"
+          and f0."POBP"=t7."POBP_CODE" group by t1."EDU_DESC",t2."GEN_DESC"
+        </p>
+        <img src="images/analyze-with-cognos/paste-sql.png" class="img-responsive">
+      </div>
+
+			<div class="step">
+        <i>22</i>
+        Click <span class="web-console-menu-item">Validate</span> to check for errors.
+      </div>
+
+			<div class="step">
+        <i>23</i>
+        Select the Query. In the <span class="web-console-menu-item">Properties</span> pane, set
+        the <span class="web-console-menu-item">Processing</span> property to
+        <span class="web-console-menu-item">Limited Local</span>.
+        <img src="images/analyze-with-cognos/set-processing-to-limited-local.png" class="img-responsive">
+      </div>
+
+			<div class="step">
+        <i>24</i>
+        Pause the pointer over the page explorer button and click a report page.
+        <img src="images/analyze-with-cognos/click-a-report-page.png" class="img-responsive">
+      </div>
+
+			<div class="step">
+        <i>25</i>
+        Drag the column from the query to corresponding axis.
+        <p class="bg-info">
+          Please note, for this chart to display <b>Education Level by Gender</b>, we put
+          &lt;#EDU_DESC#&gt; under &lt;#GEN_DESC#&gt; for <b>x-axis</b>, so that Education Level
+          will be treated as a sub-category for Gender Information.
+        </p>
+        <img src="images/analyze-with-cognos/drag-the-column.jpg" class="img-responsive">
+      </div>
+
+			<div class="step">
+        <i>26</i>
+        For <b>Default measure (y-axis)</b>, we will need specify <b>Aggregate Function</b> and
+        <b>Rollup Aggregation Function</b>. For our case, specify <b>Total</b> for both.</p>
+        <img src="images/analyze-with-cognos/chart.png" class="img-responsive">
+      </div>
+
+			<div class="step">
+        <i>27</i>
+        From <b>Page Explorer</b>, right click the report page we have been working on, and select
+        <b>Run Page</b>.
+        <img src="images/analyze-with-cognos/run-page.jpg" class="img-responsive">
+      </div>
+    </div>
+  </div>
+
+</body>
 </html>
