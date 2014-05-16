@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
 
 	<!-- bootstrap code -->
 
@@ -25,74 +25,140 @@
 	<link href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
 	<title>BLU Acceleration for Cloud @ IDUG 2014: Bring public datasets from S3</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
-<style>
-body{background-color: #eee;}
-.jumbotron{padding-top:150px; margin-top: -20px;}
-.jumbotron h1{font-size: 100px; text-align: center;}
+  <style>
+    body { background-color: #eee; }
+    .jumbotron { padding-top:150px; margin-top: -20px; }
+    .jumbotron h1 { font-size: 100px; text-align: center; }
+  </style>
 
-</style>
-
-<script type="text/javascript" src="navigation.js"> </script>
-<script type="text/javascript" src="footer.js"> </script>
-
+  <script type="text/javascript" src="navigation.js"> </script>
+  <script type="text/javascript" src="footer.js"> </script>
 </head>
-   
+
+<body>
+  <div class="jumbotron">
+    <h1>
+      <span class="glyphicon glyphicon-folder-close"></span> Bring public datasets from S3
+    </h1>
+  </div>
+
+  <div class="container">
+    <div class="scenario">
+      <p>
+        Kelly, the data analyst at Public Policy Institute, wants to be able to load publicly
+        available data sets directly from AWS S3 object storage to BLU Acceleration for Cloud and
+        use built-in analytic features to analyze data.
+      </p>
+    </div>
+
+    <div class="steps">
+      <h2>Generating the Schema</h2>
+
+			<div class="step">
+        <i>1</i>
+        Login with the provided user name/password
+      </div>
+
+			<div class="step">
+        <i>2</i>
+        Click <span class="web-console-menu-item">Manage &#8594; Work with Tables</span>
+        from the main menu
+      </div>
+
+			<div class="step">
+        <i>3</i>
+        Click on the <span class="web-console-menu-item">+</span> button and the
+        <span class="web-console-menu-item">DDL statement editor</span> will open on the right.
+      </div>
+
+			<div class="step">
+        <i>4</i>
+        Download the DDL file here:
+        <a href="files/censusPopulation_new.ddl.txt">censusPopulation_new.ddl.txt</a>
+      </div>
+
+			<div class="step">
+        <i>5</i>
+        Copy-Paste the DDL statements for the tables that you want to create and click on the
+        <span class="web-console-menu-item">Run DDL</span> button. Users can also create all of the
+        tables from the attached file at once
+      </div>
+
+      <h2>Loading Data</h2>
+
+			<div class="step">
+        <i>6</i>
+        Click <span class="web-console-menu-item">Manage &#8594; Load Data</span>
+        from the main menu
+      </div>
+
+			<div class="step">
+        <i>7</i>
+        Open <span class="web-console-menu-item">Schedule a load</span> section
+      </div>
+
+			<div class="step">
+        <i>8</i>
+        Choose <span class="web-console-menu-item">Amazon S3 &#8594; Browse public bucket</span>
+        and provide the bucket name, e.g. <span class="web-console-menu-item">ibm.idug.public</span>.
+        Then, click on the <span class="web-console-menu-item">Browse S3 Files</span> button.
+        <img src="images/bring-public-datasets-from-s3/choose-s3.png" class="img-responsive">
+      </div>
 
 
+			<div class="step">
+        <i>9</i>
+        Select the data file that you want to load as below. Try these data files:
+        <ul>
+          <li>
+            <span class="web-console-menu-item">Ancestry.csv</span> can be selected for loading
+            data into <span class="web-console-menu-item">Ancestry</span> table
+          </li>
+          <li>
+            <span class="web-console-menu-item">ss12pca.csv</span> or
+            <span class="web-console-menu-item">person_2_5gb.del</span> can be selected for loading
+            data into <span class="web-console-menu-item">Person</span> table
+          </li>
+        </ul>
+        Click <span class="web-console-menu-item">OK</span>
+        <img src="images/bring-public-datasets-from-s3/select-a-file.png" class="img-responsive">
+      </div>
 
+			<div class="step">
+        <i>10</i>
+        Separator character and date/time options can be set as below. Click
+        <span class="web-console-menu-item">Next</span>
+        <img src="images/bring-public-datasets-from-s3/options.png" class="img-responsive">
+      </div>
 
+			<div class="step">
+        <i>11</i>
+        Select Schema which will be same as your user name as in step 1, also select the table
+        that you are interested in loading
+      </div>
 
-<div class="jumbotron">
+			<div class="step">
+        <i>12</i>
+        Choose either of the options below at
+        <span class="web-console-menu-item">Select a table</span> step
+        <img src="images/bring-public-datasets-from-s3/append-or-replace.png" class="img-responsive">
+      </div>
 
-	<h1>
-		<span class="glyphicon glyphicon-folder-close"></span> Bring public datasets from S3
-	</h1>
+			<div class="step">
+        <i>13</i>
+        Select date and time when you want to run this load job, click on
+        <span class="web-console-menu-item">Next</span>,
+        <span class="web-console-menu-item">Finish</span> and close the alert which appears after
+        the load job gets saved successfully
+      </div>
 
-</div>
+			<div class="step">
+        <i>14</i>
+        Feel free to follow other analytic scenarios on this data. Browse
+        <a href="analyze-with-r.html">R samples</a> to get an idea of what you could do with it.
+      </div>
+    </div>
+  </div>
 
-
-
-<div class="container">
-	<div class="row clearfix">
-			<div class="scenario">
-			<i>
-			<p class="bg-info">Kelly the data analyst at Public Policy Institute want to be able to load publicly available data sets directly from AWS S3 object storage to BLU Acceleration for cloud and use built-in analytic feature to analyze data.</p>
-			</i>
-			<p class="step">1) Login with the provided user name/password</p>
-			<p class="step">2) Click Manage -> Work with Tables from the main menu</p>
-			<p class="step">3) Click + button -> DDL statement editor will open on the right</p>
-			<p class="step">4) Download the DDL file here: <a href="files/censusPopulation_new.ddl.txt">censusPopulation_new.ddl.txt</a></p>
-
-			<p class="step">5) Copy-Paste DDL statements for the tables that you want to create - Click Run DDL button<br>
-			Users can also create all of the tables from the attached file at once</p>
-
-			<p class="step">6) Click Manage -> Load Data from the main menu</p>
-
-			<p class="step">7) Open "Schedule a load" section</p>
-
-			<p class="step">8) Choose Amazon S3 -> Browse public bucket -> Provide bucket name, e.g. ibm.idug.public -> Browse S3 Files</p>
-			<img src="images/bring-public-datasets-from-s3/choose-s3.png" class="img-responsive">
-
-			<p class="step">9) Select the data file that you want to load as below -> OK <br> 
-			Try these data files:<br>
-			<b>Ancestry.csv</b> can be selected for loading data in to <b>Ancestry</b> table<br>
-			<b>ss12pca.csv</b> or <b>person_2_5gb.del</b> can be selected for loading data in to <b>Person</b> table</p>
-			<img src="images/bring-public-datasets-from-s3/select-a-file.png" class="img-responsive">
-
-			<p class="step">10) Separator character and date/time options can be set as below -> Next</p>
-			<img src="images/bring-public-datasets-from-s3/options.png" class="img-responsive">
-
-			<p class="step">11) Select Schema which will be same as your user name as in step 1, also select the table that you are interested in loading</p>
-
-			<p class="step">12) Choose either of the options below at "Select a table" step</p>
-			<img src="images/bring-public-datasets-from-s3/append-or-replace.png" class="img-responsive">
-
-			<p class="step">13) Select date and time when you want to run this load job -> Next -> Finish -> Close alert which appears after Load Job gets saved successfully</p>
-			<p class="step">14) Feel free to follow other analytic scenarios on this data. Browse R samples to get an idea of what you could do with it.</p>
-			</div>
-	</div>
-</div>
-
-
-  </body>
+</body>
 </html>
