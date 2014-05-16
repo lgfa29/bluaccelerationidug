@@ -9,6 +9,9 @@ background-color: #27b1DB;
 color: white;
 width: 100%}
 
+
+.index-buttons .column{margin-bottom: 30px;}
+
 .gravatar{
 -webkit-border-radius: 250px;
 -moz-border-radius: 250px;
