@@ -10,6 +10,7 @@ document.write('<li><a href="sync-from-cloudant.html">Sync from Cloudant</a></li
 document.write('<li><a href="bring-public-datasets-from-s3.html">Bring public datasets from S3</a></li>');
 document.write('</ul>');
 document.write('<ul class="nav navbar-nav navbar-right">');
+document.write('<li><a href="https://www-950.ibm.com/survey/oid/wsb.dll/s/ag56c" target="_blank">Survey</a></li>');
 document.write('<li><a href="http://bluforcloud.com/?r=idug" target="_blank">BLUForCloud.com</a></li>');
 document.write('</ul>');
 document.write('</div>');
